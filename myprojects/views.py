@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def myprojects(request):
-    return HttpResponse('It actually works!')
+    return render(request, 'projects.html')
 
 def myproject(request, pk):
-    return HttpResponse('Single Project!')
+    return render(request, 'single-project.html')
 
 # Create your views here.
