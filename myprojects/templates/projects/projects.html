@@ -21,7 +21,7 @@
 
 <ul>
   {% for myproject in myprojects %}
-  <li>Title:{{myproject.title}} --- {{myproject.description}}</li>
+  <li>Title:<a href="{% url 'master_link_project' myproject.id %}">{{myproject.title}}</a> --- {{myproject.description}}</li>
   {% endfor %}
 </ul>
 

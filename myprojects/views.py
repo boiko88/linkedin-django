@@ -32,6 +32,10 @@ def myprojects(request):
 
 
 def myproject(request, pk):
-    return render(request, 'projects/single-project.html')
+    myprojectObj = None
+    for i in projectsList:
+        if i['id'] == pk:
+            myprojectObj = i
+    return render(request, 'projects/single-project.html', {'myproject': myprojectObj})
 
 # Create your views here.
