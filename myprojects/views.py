@@ -23,8 +23,8 @@ projectsList = [
     
     {
      'id': '4',
-     'title': 'eCommerce Website',
-     'description': 'An eCommerce website selling clothes',   
+     'title': 'Ecommerce Website',
+     'description': 'An Ecommerce website selling clothes',   
         
     },
 
