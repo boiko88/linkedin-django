@@ -6,13 +6,27 @@
 
 <p>Hello you are on the {{page}} page</p>
 
+<h1>myprojects list</h1>
 
-<h1>myprojects</h1>
-
-<ul>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>MyProject</th>
+    <th>Positive Votes</th>
+    <th>Votes</th>
+    <th></th>
+  </tr>
   {% for myproject in myprojects %}
-  <li>Title:<a href="{% url 'master_link_project' myproject.id %}">{{myproject.title}}</a> --- {{myproject.created_value}}</li>
+  <tr>
+    <td>{{myproject.id}}</td>
+    <td>{{myproject.title}}</td>
+    <td>{{myproject.vote_ratio}}</td>
+    <td>{{myproject.vote_total}}</td>
+    <td>{{myproject.created_value}}</td>
+    <td><a href="{% url 'master_link_project' myproject.id %}">View</a></td>
+  </tr>
+
   {% endfor %}
-</ul>
+</table>
 
 {% endblock content %}
