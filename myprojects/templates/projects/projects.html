@@ -7,21 +7,11 @@
 <p>Hello you are on the {{page}} page</p>
 
 
-{% if number > 10 %}
-<p>Number is greater than 10</p>
-
-{% elif number == 10 %}
-<p>Number is 10 precisely</p>
-
-{% else %}
-<p>Number is less than 10</p>
-{% endif %}
-
 <h1>myprojects</h1>
 
 <ul>
   {% for myproject in myprojects %}
-  <li>Title:<a href="{% url 'master_link_project' myproject.id %}">{{myproject.title}}</a> --- {{myproject.description}}</li>
+  <li>Title:<a href="{% url 'master_link_project' myproject.id %}">{{myproject.title}}</a> --- {{myproject.created_value}}</li>
   {% endfor %}
 </ul>
 
